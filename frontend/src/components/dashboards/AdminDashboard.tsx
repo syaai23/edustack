@@ -11,7 +11,7 @@ import {
   EyeIcon,
   TrashIcon
 } from '@heroicons/react/24/outline'
-import { useAuthStore } from '../../stores'
+
 import api from '../../services/api'
 
 interface User {
@@ -32,7 +32,7 @@ interface DashboardStats {
 }
 
 const AdminDashboard: React.FC = () => {
-  const { user } = useAuthStore()
+ 
   const [users, setUsers] = useState<User[]>([])
   const [stats, setStats] = useState<DashboardStats>({
     totalUsers: 0,
